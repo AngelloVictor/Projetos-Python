@@ -4,8 +4,8 @@ import random
 import time
 
 layout = [
-    [sg.Text("How many rows")],
-    [sg.Input(size=(5, 0), key="rows")],
+    [sg.Text("How many rows?")],
+    [sg.Input(size=(5, 0), key="rows", default_text="1")],
     [sg.Text("Sides")],
     [
         sg.Radio("D4", "dice", key="4"),
@@ -32,7 +32,7 @@ class Screen:
             self.button, self.values = self.window.Read()
             self.window.FindElement("_output_").Update("")
 
-            rows = int(self.values["rows"])
+            rows = int(self.values["rows"]) #if self.values["rows"] else 1 
             dice_sides = 6
             dice_number = []
 
