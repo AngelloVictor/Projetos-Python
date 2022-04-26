@@ -1,4 +1,3 @@
-from email.policy import default
 import PySimpleGUI as sg
 import random
 import time
@@ -22,8 +21,6 @@ layout = [
 
 class Screen:
     def __init__(self):
-        pass
-
         self.window = sg.Window("Dice Roller", layout,element_justification='c')
 
     def start(self):
